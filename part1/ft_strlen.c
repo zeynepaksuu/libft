@@ -1,11 +1,21 @@
 size_t	ft_strlen(const char *str)
 {
-	size_t	length;
+	size_t	countl;
 
-	length = 0;
-	while (str[length] != '\0')
+	countl = 0;
+	while (str[countl] != '\0')
 	{
-		length++;
+		countl++;
 	}
-	return (length);
+	return (countl);
 }
+
+/* 
+int main()
+{
+	char *s = "merhaba";
+	size_t len;
+	len = ft_strlen(s);
+	printf("%zu", len);
+}
+*/ 
