@@ -6,18 +6,8 @@ int ft_isalpha(int c)
 /*
 int	main(void)
 {
-	//1
-	printf("%d%d)", ft_isalpha('a'), isalpha('a') != 0);
-	printf("%d%d)", ft_isalpha('Z'), isalpha('Z') != 0);
-	//0
-	printf("%d", ft_isalpha('1'), isalpha('1') != 0);
-	printf("%d", ft_isalpha('@'), isalpha('@') != 0);
-	//sınır
-	printf("%d", ft_isalpha('['));
-	printf("%d", ft_isalpha('`'));
-	printf("%d", ft_isalpha('{'));
-	//->
-	printf("%d", ft_isalpha(200));
+	//a, Z, 3200, 5, [, @, &, q
+	printf("%d", ft_isalpha());
 	return (0);
 }
 */
