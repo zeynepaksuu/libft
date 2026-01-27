@@ -23,3 +23,13 @@ int ft_atoi(const char *str)
     }
     return ((int)(result * sign));
 }
+
+/*
+int main()
+{
+    printf("%d\n",ft_atoi("   -123"));
+    printf("%d\n",ft_atoi("+4299"));
+    printf("%d\n",ft_atoi("42abc50"));
+    printf("%d\n",ft_atoi("    "));
+}
+*/
