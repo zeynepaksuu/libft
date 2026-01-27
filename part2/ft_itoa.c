@@ -1,4 +1,4 @@
-static int	get_len(long n)
+static int	findlen(long n)
 {
 	int	len;
 
@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 	long	nbr;
 
 	nbr = n;
-	len = get_len(nbr);
+	len = findlen(nbr);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
@@ -39,3 +39,23 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+/*
+int main(void)
+{
+    int     sayi1 = 1234;
+    int     sayi2 = -567;
+    int     sayi3 = -2147483648;
+    char    *res;
+    res = ft_itoa(sayi1);
+    printf("%s\n", res);
+    free(res);
+    res = ft_itoa(sayi2);
+    printf("%s\n", res);
+    free(res);
+    res = ft_itoa(sayi3);
+    printf("%s\n", res);
+    free(res);
+    return (0);
+}
+*/
