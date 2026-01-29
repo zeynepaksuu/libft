@@ -19,3 +19,29 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	res[i] = '\0';
 	return (res);
 }
+
+/*
+
+char my_map_func(unsigned int i, char c)
+{
+    // indeks ciftse harfi bir sonraki harfe donustur (a -> b)
+    if (i % 2 == 0)
+        return (c + 1);
+    return (c);
+}
+
+int main(void)
+{
+    char *s = "aaaaa";
+    char *result;
+
+    result = ft_strmapi(s, my_map_func);
+    if (result)
+    {
+        printf("Girdi : %s\n", s);
+        printf("Sonuc : %s\n", result);
+        free(result);
+    }
+    return (0);
+}
+*/
