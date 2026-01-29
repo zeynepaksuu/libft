@@ -22,3 +22,31 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+
+/*
+// büyük harf
+void *test_map(void *content) {
+    return (strdup("deneEme")); 
+}
+
+void del_content(void *content) {
+    free(content);
+}
+
+int main(void) {
+    t_list *eski_liste = ft_lstnew(strdup("Eski 1"));
+    ft_lstadd_back(&eski_liste, ft_lstnew(strdup("Eski 2")));
+
+    t_list *yeni_liste = ft_lstmap(eski_liste, test_map, del_content);
+
+    t_list *tmp = yeni_liste;
+    while (tmp) {
+        printf("%s\n", (char *)tmp->content);
+        tmp = tmp->next;
+    }
+	//eskilerine clear atcas
+    ft_lstclear(&eski_liste, del_content);
+    ft_lstclear(&yeni_liste, del_content);
+    return (0);
+}
+*/
