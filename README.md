@@ -67,7 +67,7 @@ Include the header file in your C project:
 Compile your project with `libft.a`:
 
 ```bash
-gcc main.c libft.a
+cc main.c libft.a
 ```
 
 ## Library Content
