@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/02 19:23:32 by zaksu             #+#    #+#             */
+/*   Updated: 2026/02/02 19:44:41 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*c1;
@@ -17,16 +31,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	char *s1 = "abcdef";
-	char *s2 = "abcdez";
-	printf("%d\n", ft_memcmp(s1, s2, 6));
-	printf("%d\n", ft_memcmp(s1, s2, 5)); 
-	int n1[] = {1, 2, 0, 4};
-	int n2[] = {1, 2, 0, 5};
-	printf("%d\n", ft_memcmp(n1, n2, sizeof(int) * 4));
-}
-*/

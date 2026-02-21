@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/30 19:14:53 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/31 21:15:39 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 static int	findlen(long n)
 {
 	int	len;
@@ -39,23 +53,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-
-/*
-int main(void)
-{
-    int     sayi1 = 1234;
-    int     sayi2 = -567;
-    int     sayi3 = -2147483648;
-    char    *res;
-    res = ft_itoa(sayi1);
-    printf("%s\n", res);
-    free(res);
-    res = ft_itoa(sayi2);
-    printf("%s\n", res);
-    free(res);
-    res = ft_itoa(sayi3);
-    printf("%s\n", res);
-    free(res);
-    return (0);
-}
-*/

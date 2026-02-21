@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/02 17:35:12 by zaksu             #+#    #+#             */
+/*   Updated: 2026/02/02 17:49:12 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
@@ -12,32 +26,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	last = ft_lstlast(*lst);
 	last->next = new;
 }
-
-/*
-typedef struct s_list
-{
-    void            *content;
-    struct s_list   *next;
-} t_list;
-
-int main(void)
-{
-    t_list  *liste = NULL;
-
-    // listeye yeni eleman
-    ft_lstadd_back(&liste, ft_lstnew("Vagon 1"));
-
-    ft_lstadd_back(&liste, ft_lstnew("Vagon 2"));
-    ft_lstadd_back(&liste, ft_lstnew("Vagon 3"));
-
-    t_list *temp = liste;
-    while (temp)
-    {
-        printf("%s -> ", (char *)temp->content);
-        temp = temp->next;
-    }
-    printf("NULL\n");
-
-    return (0);
-}
-*/

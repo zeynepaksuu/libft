@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/31 19:18:56 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/31 19:25:36 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	nb;
@@ -16,20 +30,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(nb + '0', fd);
 }
-
-/*
-int main(void)
-{
-	ft_putnbr_fd(42, 1);
-	write(1, "\n", 1);
-
-	ft_putnbr_fd(-1234, 1);
-	write(1, "\n", 1);
-
-	ft_putnbr_fd(-2147483648, 1);
-	write(1, "\n", 1);
-
-	ft_putnbr_fd(0, 1);
-	write(1, "\n", 1);
-}
-*/

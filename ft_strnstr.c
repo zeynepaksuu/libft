@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/17 17:44:47 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/31 18:43:10 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
@@ -19,19 +33,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-/*
-int main()
-{
-    char *big = "deneme cümle";
-    char *little = "eneme cü";
-    char *res;
-    res = ft_strnstr(big, little, 20);
-    printf("%s\n", res ? res : "NULL");
-    res = ft_strnstr(big, little, 10);
-    printf(" %s\n", res ? res : "NULL");
-
-    res = ft_strnstr(big, "", 5);
-    printf("%s\n", res ? res : "NULL");
-}
-*/

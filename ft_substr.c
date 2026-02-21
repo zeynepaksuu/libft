@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/30 19:29:05 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/31 11:13:37 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
@@ -8,7 +22,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));
-        
 	if (len > slen - start)
 		len = slen - start;
 	str = (char *)malloc(sizeof(char) * (len + 1));
@@ -17,25 +30,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
-
-/*
-int main(void)
-{
-    char *dizi = "deneme test";
-    char *sonuc;
-
-    sonuc = ft_substr(dizi, 8, 5);
-    printf("%s\n", sonuc);
-    free(sonuc);
-
-    sonuc = ft_substr(dizi, 50, 5);
-    printf("%s\n", sonuc);
-    free(sonuc);
-
-    sonuc = ft_substr(dizi, 8, 100);
-    printf("%s\n", sonuc);
-    free(sonuc);
-
-    return (0);
-}
-*/

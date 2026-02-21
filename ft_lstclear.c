@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/02 13:20:21 by zaksu             #+#    #+#             */
+/*   Updated: 2026/02/02 17:41:46 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*tmp;
@@ -12,27 +26,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-
-/*
-typedef struct s_list {
-    void            *content;
-    struct s_list   *next;
-} t_list;
-
-void del_func(void *content) {
-    free(content);
-}
-
-int main(void) {
-    t_list *bas = ft_lstnew(strdup("Vagon 1"));
-    ft_lstadd_back(&bas, ft_lstnew(strdup("Vagon 2")));
-    ft_lstadd_back(&bas, ft_lstnew(strdup("Vagon 3")));
-
-    printf("önce: %p\n", bas);
-    ft_lstclear(&bas, del_func);
-
-    printf("sonra: %p\n", bas); // \0
-
-    return (0);
-}
-*/

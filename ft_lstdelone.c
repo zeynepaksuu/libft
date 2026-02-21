@@ -1,45 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/02 16:42:32 by zaksu             #+#    #+#             */
+/*   Updated: 2026/02/02 17:43:07 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (!lst || !del)
 		return ;
-
 	del(lst->content);
-
 	free(lst);
 }
-
-
-/*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-typedef struct s_list {
-    void            *content;
-    struct s_list   *next;
-} t_list;
-
-//standart free
-void del_content(void *content) {
-    free(content);
-}
-
-void ft_lstdelone(t_list *lst, void (*del)(void *));
-
-int main(void) {
-    t_list *dugum;
-    char *str = strdup("deneme");
-
-    dugum = malloc(sizeof(t_list));
-    dugum->content = str;
-    dugum->next = NULL;
-
-    printf("önce: %s\n", (char *)dugum->content);
-
-    ft_lstdelone(dugum, del_content);
-
-    printf("silindi\n");
-    //artık dügüme ulasmaya calısmak hata olcak ama denemek lazım
-
-    return (0);
-}
-*/

@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/02 17:47:10 by zaksu             #+#    #+#             */
+/*   Updated: 2026/02/02 22:45:34 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_elem;
@@ -9,33 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_elem->next = NULL;
 	return (new_elem);
 }
-
-/*
-
-//
-typedef struct s_list
-{
-    void            *content;
-    struct s_list   *next;
-} t_list;
-
-int main(void)
-{
-    t_list  *dugum;
-    char    *metin = "deneme";
-
-    dugum = ft_lstnew(metin);
-
-    if (dugum)
-    {
-        //(char *) kullanıoz çünkü content void*
-        printf("Icerik: %s\n", (char *)dugum->content);
-        
-        if (dugum->next == NULL)
-            printf("null atandı\n");
-
-        free(dugum);
-    }
-    return (0);
-}
-*/

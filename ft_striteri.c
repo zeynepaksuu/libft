@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/31 19:25:01 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/31 19:44:44 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
@@ -11,24 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-/*
-void my_iter_func(unsigned int i, char *c)
-{
-    // indeks tek ise harfi buyutcez
-    if (i % 2 != 0 && (*c >= 'a' && *c <= 'z'))
-        *c = *c - 32;
-}
-int main(void)
-{
-    // salt okunur bir dize (char *str = "abc") kullanılamazmıs
-    // striteri dizeyi degistirmeye calisiyor. bellekte yeni bir dize accaz
-    char metin[] = "merhaba"; 
-
-    printf("girilen : %s\n", metin);
-    
-    ft_striteri(metin, my_iter_func);
-    
-    printf("cıktı : %s\n", metin);
-}
-*/

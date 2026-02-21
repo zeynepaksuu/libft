@@ -1,17 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/31 19:16:01 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/31 19:18:16 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-
-/*
-int main(void)
-{
-	// 1- ekran
-	ft_putchar_fd('A', 1);
-	ft_putchar_fd('\n', 1);
-
-	// 2- error kanal
-	ft_putchar_fd('H', 2);
-	ft_putchar_fd('\n', 2);
-}
-*/

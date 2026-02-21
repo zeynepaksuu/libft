@@ -1,16 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/15 13:04:35 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/30 17:53:45 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	return (c);
 }
-
-/*
-int main(void)
-{
-    printf("%c\n", ft_toupper('b'));
-    printf("%c\n", ft_toupper('A'));
-    printf("%c\n", ft_toupper('4'));
-    printf("%c\n", ft_toupper('!'));
-}
-*/

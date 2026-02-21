@@ -1,16 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/15 13:04:39 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/31 19:34:08 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
 }
-
-/*
-int main(void)
-{
-    printf("%c\n", ft_tolower('b'));
-    printf("%c\n", ft_tolower('A'));
-    printf("%c\n", ft_tolower('3'));
-    printf("%c\n", ft_tolower('!'));
-}
-*/

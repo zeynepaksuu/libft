@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/15 16:50:59 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/30 17:27:57 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*d;
@@ -19,21 +33,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*
-int main()
-{
-    char x[10] = "123456789";
-    ft_memmove(x + 2, x, 3);
-    printf("%s\n",x);
-
-    char s1[] = "deneme";
-    char d1[10];
-    ft_memmove(d1, s1, 8);
-    printf("%s\n", d1);
-
-    char d2[] = "test";
-    ft_memmove(d2, s2, 0);
-    printf("%s\n", d2);
-}
-*/

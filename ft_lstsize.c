@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/02 17:47:58 by zaksu             #+#    #+#             */
+/*   Updated: 2026/02/02 18:45:11 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 int	ft_lstsize(t_list *lst)
 {
 	int	size;
@@ -10,27 +24,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (size);
 }
-
-/*
-typedef struct s_list
-{
-    void            *content;
-    struct s_list   *next;
-} t_list;
-
-int main(void)
-{
-    t_list  *liste = NULL;
-
-    // eleman ekliyoruz
-    ft_lstadd_front(&liste, ft_lstnew("Düğüm 1"));
-    ft_lstadd_front(&liste, ft_lstnew("Düğüm 2"));
-    ft_lstadd_front(&liste, ft_lstnew("Düğüm 3"));
-
-    int result = ft_lstsize(liste);
-    
-    printf("%d\n", count); // 3
-
-    return (0);
-}
-*/

@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/13 15:02:35 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/30 16:35:44 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 size_t	ft_strlen(const char *str)
 {
 	size_t	countl;
@@ -9,13 +23,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (countl);
 }
-
-/* 
-int main()
-{
-	char *s = "merhaba";
-	size_t len;
-	len = ft_strlen(s);
-	printf("%zu", len);
-}
-*/ 

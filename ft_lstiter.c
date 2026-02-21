@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/02/02 17:43:29 by zaksu             #+#    #+#             */
+/*   Updated: 2026/02/02 18:27:48 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
@@ -5,28 +19,6 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	while (lst)
 	{
 		f(lst->content);
-		
 		lst = lst->next;
 	}
 }
-
-/*
-typedef struct s_list {
-    void            *content;
-    struct s_list   *next;
-} t_list;
-
-//contenti yazdıralım
-void print_content(void *content) {
-    printf("deneme: %s\n", (char *)content);
-}
-
-int main(void) {
-    t_list *liste = ft_lstnew("kaju");
-    ft_lstadd_back(&liste, ft_lstnew("badem"));
-    ft_lstadd_back(&liste, ft_lstnew("fındık"));
-
-    ft_lstiter(liste, print_content);
-    return (0);
-}
-*/

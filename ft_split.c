@@ -1,83 +1,90 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/31 19:23:14 by zaksu             #+#    #+#             */
+/*   Updated: 2026/02/02 18:14:14 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 static int	count_words(const char *s, char c)
 {
 	int	count;
+	int	i;
 
 	count = 0;
-	while (*s)
+	i = 0;
+	while (s[i])
 	{
-		while (*s && *s == c)
-			s++;
-		if (*s)
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			count++;
-		while (*s && *s != c)
-			s++;
+		i++;
 	}
 	return (count);
 }
 
-static char	**free_all(char **howm, int i)
+static char	*fill_word(const char *s, char c)
+{
+	char	*word;
+	int		len;
+	int		i;
+
+	len = 0;
+	while (s[len] && s[len] != c)
+		len++;
+	word = (char *)malloc(sizeof(char) * (len + 1));
+	if (!word)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		word[i] = s[i];
+		i++;
+	}
+	word[i] = '\0';
+	return (word);
+}
+
+static void	*free_all(char **res, int i)
 {
 	while (i >= 0)
-		free(howm[i--]);
-	free(howm);
+	{
+		free(res[i]);
+		i--;
+	}
+	free(res);
 	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**howm;
+	char	**res;
 	int		i;
-	int		len;
+	int		words;
 
 	if (!s)
 		return (NULL);
-	howm = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!howm)
+	words = count_words(s, c);
+	res = (char **)malloc(sizeof(char *) * (words + 1));
+	if (!res)
 		return (NULL);
 	i = 0;
-	while (*s)
+	while (i < words)
 	{
 		while (*s && *s == c)
 			s++;
-		if (*s)
-		{
-			len = 0;
-			while (s[len] && s[len] != c)
-				len++;
-			howm[i++] = ft_substr(s, 0, len);
-			if (!howm[i - 1])
-				return (free_all(howm, i - 2));
-			s += len;
-		}
+		res[i] = fill_word(s, c);
+		if (!res[i])
+			return (free_all(res, i - 1));
+		while (*s && *s != c)
+			s++;
+		i++;
 	}
-	howm[i] = NULL;
-	return (howm);
+	res[i] = NULL;
+	return (res);
 }
-
-
-/*
-int main(void)
-{
-    char    *str = "  --deneme-test-bir-ki-uc  ";
-    char    **tablo;
-    int     i;
-
-    i = 0;
-    tablo = ft_split(str, '-');
-    
-    if (!tablo)
-    {
-        printf("x\n");
-        return (1);
-    }
-
-    while (tablo[i] != NULL)
-    {
-        printf("%d: [%s]\n", i, tablo[i]);
-        free(tablo[i]);
-        i++;
-    }
-    free(tablo);
-    return (0);
-}
-*/

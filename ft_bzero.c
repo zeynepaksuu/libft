@@ -1,33 +1,18 @@
-void ft_bzero(void *s,  size_t n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/15 14:21:30 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/30 16:48:22 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-    ft_memset(s, 0, n);
+	ft_memset(s, 0, n);
 }
-
-/*
-    size_t i;
-    i = 0;
-
-    while (i < n)
-    {
-        ((unsigned char *)s)[i] = 0;
-        i++;
-    }
-*/
-
-
-/*
-int main()
-{
-    char x[10] = "deneme";
-    
-    ft_bzero(x, 3);
-
-    printf("%d\n", x[0]);
-    printf("%d\n", x[1]);
-    printf("%d\n", x[2]);
-    printf("%c\n", x[3]);
-    printf("%c\n", x[4]); 
-
-    return 0;
-}
-*/

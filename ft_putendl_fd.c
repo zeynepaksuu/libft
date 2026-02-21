@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zaksu <zaksu@student.42istanbul.com.tr>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/31 19:17:53 by zaksu             #+#    #+#             */
+/*   Updated: 2026/01/31 19:28:20 by zaksu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (!s)
@@ -5,15 +19,3 @@ void	ft_putendl_fd(char *s, int fd)
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);
 }
-
-/*
-int main(void)
-{
-	char *str = "deneme";
-	
-	ft_putendl_fd(str, 1);
-	ft_putendl_fd(str, 1);
-
-	return (0);
-}
-*/
