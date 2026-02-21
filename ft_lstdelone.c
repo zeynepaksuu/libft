@@ -38,7 +38,7 @@ int main(void) {
     ft_lstdelone(dugum, del_content);
 
     printf("silindi\n");
-    // artık dügüme ulasmaya calısmak hata olcak ama denemek lazım
+    //artık dügüme ulasmaya calısmak hata olcak ama denemek lazım
 
     return (0);
 }

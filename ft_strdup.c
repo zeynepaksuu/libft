@@ -15,12 +15,7 @@ char	*ft_strdup(const char *s1)
 	return (copy);
 }
 
-
 /*
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 int main(void)
 {
     char *orig = "deneme";
@@ -30,8 +25,6 @@ int main(void)
     if (copy){
     
         printf("%s\n", copy);
-        
-       //manuel free etcez
         free(copy);
     }
     return (0);
